@@ -1,7 +1,7 @@
 
 [[main]]
   name = "Começe Aqui"
-  url = "/docs/basic/introduction"
+  url = "/docs/basic/introduction/"
 # url = "/docs/1.0/prologue/introduction/"
   weight = 10
 
