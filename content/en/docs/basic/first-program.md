@@ -73,3 +73,46 @@ Pontos importantes a serem observados ao escrever um programa C++:
 
 - __cout__ é usado para o print de statements e __cin__ é usado para receber *inputs*.
 
+___
+
+## Prática 
+
+No seu editor de código ou ide faça o seguinte exercício:
+
+Escreve um programa que exibe __Hello World__.
+
+Exemplo 1.
+
+```s
+Input: 
+No Input
+
+Output:
+Hello World
+```
+### Sua Tarefa
+
+Copie o código abaixo e faça um output do __"Hello World"__:
+
+```c++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  // Digite aqui
+  return 0;
+}
+```
+{{< details "Resposta:" >}}
+```c++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  cout << "Hello World";
+  return 0;
+}
+```
+{{< /details >}}

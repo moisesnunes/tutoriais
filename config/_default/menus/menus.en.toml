@@ -10,3 +10,8 @@
   url = "/blog/"
   weight = 20
 
+[[main]]
+  name = "Tutorial"
+  url = "/docs/tutorial/basic/introduction"
+  weight = 30
+

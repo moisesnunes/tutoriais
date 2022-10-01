@@ -14,4 +14,8 @@ weight: 40
 toc: true
 ---
 
-## Is it fine to write void main() or main() in C/C++?
+## É correto escrever void main() ou main() em C/C++?
+
+Em C++ o tipo de retorno padrão de main é void, ou seja, *main()* não retornará nada. Mas, em C, o tipo de retorno padrão de main é int, ou seja, *main()* retornará um valor inteiro por padrão.
+
+

@@ -13,10 +13,3 @@
 
 {{ $lqip := $image.Resize site.Params.lqipWidth -}}
 
-<img
-  class="card-img-top img-fluid lazyload blur-up"
-  src="{{ $lqip.Permalink }}"
-  data-src="{{ $image.Permalink }}"
-  width="{{ $image.Width }}"
-  height="{{ $image.Height }}"
-  alt="{{ .Title }}">
