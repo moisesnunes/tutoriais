@@ -8,9 +8,9 @@ draft: false
 images: []
 menu:
   docs:
-    parent: ""
+    parent: "tutorial"
     identifier: "introduction-cf3b201e1a480492dbec4a35439be848"
-weight: 10
+weight: 1001
 toc: true
 ---
 ## Introdução ao C++

@@ -10,7 +10,7 @@ menu:
   docs:
     parent: ""
     identifier: "data-types-83048d6db5a53c14b8f00ff6a5523fcd"
-weight: 20
+weight: 1002
 toc: true
 ---
 {{< alert icon="👉" text="Este tutorial é rápido e objetivo, temos uma breve explicação dos data types com algumas definições seguida de um exemplo." />}}

@@ -10,6 +10,6 @@ menu:
   docs:
     parent: ""
     identifier: "loops-4f2fcf43a172fa589444c3a37e6a67c9"
-weight: 100
+weight: 10
 toc: true
 ---

@@ -10,6 +10,6 @@ menu:
   docs:
     parent: ""
     identifier: "arrays-3ec59bc15ff7d11dec6d2c2c41a3970b"
-weight: 150
+weight: 15
 toc: true
 ---

@@ -10,7 +10,7 @@ menu:
   docs:
     parent: ""
     identifier: "first-program-48e5dd3ea6caa99792ab5faf396a536b"
-weight: 30
+weight: 3
 toc: true
 ---
 ## Nosso Primeiro Porgrama em C++ - Hello World

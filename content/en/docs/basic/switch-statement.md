@@ -10,6 +10,6 @@ menu:
   docs:
     parent: ""
     identifier: "switch-statement-68b19f0704ca2d3451a9956c16a9256f"
-weight: 130
+weight: 13
 toc: true
 ---

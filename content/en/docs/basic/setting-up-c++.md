@@ -10,7 +10,7 @@ menu:
   docs:
     parent: ""
     identifier: "setting-up-c++-cf3fdbe7ccc66d43468a3d83aac3f8cc"
-weight: 20
+weight: 2
 toc: true
 ---
 

@@ -10,6 +10,6 @@ menu:
   docs:
     parent: ""
     identifier: "valid-data-types-96a10482c80da4e8f3b09189860856f8"
-weight: 70
+weight: 7
 toc: true
 ---
