@@ -12,6 +12,10 @@
 
 [[main]]
   name = "Tutorial"
-  url = "/docs/tutorial/basic/introduction"
+  url = "/docs/tutorial/basic/introduction/"
   weight = 30
 
+[[main]]
+  name = "Competitive programming"
+  url = "/docs/competitive/overview/chapter-1/"
+  wight = 40
