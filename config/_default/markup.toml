@@ -24,7 +24,7 @@ defaultMarkdownHandler = "goldmark"
   lineNumbersInTable = true
   noClasses = true
   noHl = false
-  style = 'monokai'
+  style = 'github-dark-dimmed'
   tabWidth = 4
 
 [tableOfContents]
