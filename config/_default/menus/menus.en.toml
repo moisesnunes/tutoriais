@@ -19,3 +19,8 @@
   name = "Competitive programming"
   url = "/docs/competitive/overview/chapter-1/"
   wight = 40
+
+[[main]]
+  name = "Traduções"
+  url = "docs/translate/introduction/"
+  weight = 50
