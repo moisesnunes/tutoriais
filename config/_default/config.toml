@@ -1,5 +1,5 @@
 baseurl = "https://rad-blancmange-84a9a2.netlify.app/"
-canonifyURLs = false
+canonifyURLs = true
 disableAliases = true
 disableHugoGeneratorInject = true
 enableEmoji = true

@@ -1,7 +1,7 @@
 ---
-title: "Teste de Primalidade 1 - Introdução e o School Method"
-description: ""
-lead: ""
+title: "Números Primos - Introdução e o School Method"
+description: "Nesta série de artigos descreveremos métodos, algoritmos e problemas para definir se um número é primo ou não."
+lead: "Nesta série de artigos descreveremos métodos, algoritmos e problemas para definir se um número é primo ou não."
 date: 2022-10-09T21:20:16-03:00
 lastmod: 2022-10-09T21:20:16-03:00
 draft: false
@@ -13,8 +13,32 @@ menu:
 weight: 2002
 toc: true
 ---
-- Nesta série de artigos descreveremos métodos, algoritmos e problemas para definir se um número é primo ou não.
 ____
+
+## O que são números primos ? 
+
+- Um número primo é um número natural maior que 1, que só é divisível por 1 e por ele mesmo. Os primeiros números primos são: 2 3 5 7 11 13 17 19 23...
+
+- Em outras palavras, o número primo é um número inteiro positivo maior que 1 que tem exatamente dois fatores, 1 e o próprio número.
+
+- Tenha em mente que 1 não pode ser primo.
+
+- Os números restantes, exceto 1, são classificados como números primos e compostos.
+
+## Alguns fatos interessantes sobre os números primos:
+
+- Com exceção de 2, que é o menor número primo e o único número primo par, todos os números primos são números ímpares.
+
+- Todo número primo pode ser representado na forma de $6n + 1$ ou $6n – 1$, exceto os números primos 2 e 3, em que $n$ é um número natural
+
+- Dois e três são apenas dois números naturais consecutivos que são primos.
+
+- Todo número inteiro par maior que 2 pode ser expresso como a soma de dois primos conforme: [Goldbach's conjecture](https://en.wikipedia.org/wiki/Goldbach%27s_conjecture).
+
+- A probabilidade de que um determinado número n escolhido aleatoriamente seja primo é inversamente proporcional ao seu número de dígitos, ou ao logaritmo de n: [Prime number theorem](https://en.wikipedia.org/wiki/Prime_number_theorem).
+_____
+
+## Como sabemos se um número é primo ou não?
 
 Dado um inteiro positivo, verifique se o número é primo ou não. Um primo é um número natural maior que 1 que não possui divisores positivos além de 1 e ele mesmo. Exemplos dos primeiros números primos são {2, 3, 5, …}
 
@@ -48,6 +72,10 @@ using namespace std;
 
 bool prime(int n)
 {
+  // 1 não é primo
+  if (n <= 1)
+    return false;
+
   // Check de 2 até n - 1
   for (int i = 2; i < n; i++)
     if (n % i == 0)
@@ -72,7 +100,11 @@ __Python__
 ```python
 # Um metódo em python usando o school method para sabermos se um número é primo
 def prime(n):
-  
+
+  # 1 não é primo
+  if ( n<= 1):
+    return False
+
   # Check de 2 até n - 1
   for i in range(2, n):
     if n %  i == 0:
@@ -101,6 +133,10 @@ using namespace std;
 
 bool prime(int n)
 {
+   // 1 não é primo
+  if (n <= 1)
+    return false;
+
   // Check de 2 até a raiz quadrada de n
   for (int i = 2; i <= sqrt(n); i++)
     if (n % i == 0)
@@ -125,6 +161,10 @@ __Python__
 import math
 
 def prime(n):
+
+  # 1 não é primo
+  if ( n<= 1):
+    return False
 
   # Check de 2 até a raiz quadrada de n
   for i in range(2, int(math.sqrt(n)) + 1):
@@ -159,10 +199,14 @@ using namespace std;
  
 bool prime(int n)
 {
+    // Check se n=1 ou n=0
+    if (n <= 1)
+        return false;
+    // Check se n=2 ou n=3
     if (n == 2 || n == 3)
         return true;
- 
-    if (n <= 1 || n % 2 == 0 || n % 3 == 0)
+    // Check se n é divisivel por 2 ou 3
+    if (n % 2 == 0 || n % 3 == 0)
         return false;
  
     // Check todos os números da forma 6k ± 1
@@ -238,5 +282,117 @@ Explicação: 25 tem três fatores 1, 5, 25
 __Restrições__:
 
  - $1 ≤ N ≤ 10^9$
+____
+
+Você pode enviar sua resposta no [GeeksforGeeks](https://practice.geeksforgeeks.org/problems/prime-number2314/1).
+____
+
+## Aprenda um programa em C para saber se um número é primo ou não 
+
+Todo código é explicado logo abaixo. Se você não usa C, você pode tentar implementar o programa em C++ ou Python.
+
+```c
+#include<stdio.h>
+int main(){
+
+ int num, i, conte=0;
+ printf("Digite um numero para saber se ele e primo ou nao: \n");
+ scanf("%d", &num);
+ for(i = 1; i <= num; i++)
+ {
+  if(num%i == 0)
+  {
+    conte++;
+  }
+ }
+ if(conte==2)
+ {
+  printf("O valor digitado %d e um numero primo\n", num);
+ }
+ else
+ {
+  printf("O valor digitado %d nao e um numero primo porque ele e divisivel por\n", num);
+  for(i = 1; i <= num; i++)
+  {
+    if (num%i == 0)
+    {
+      printf("%d\n", i);
+    }
+  }
+ }
+}
+```
+__Explicação__: *O número primo deve ser divisível por 1 e por ele mesmo. Este é o conceito principal deste programa.*
+
+1. Começamos o programa declarando as variáveis:
+
+- __num__ → Armazenar os *números*
+- __i__ → Variável *temporária*
+- __conte__ → Para armazenar os números dos *divisores*
+
+2. Pegamos o número como input
+```c
+printf("Digite um numero para saber se ele e primo ou nao: \n");
+scanf("%d", &num);
+```
+3. 
+
+```c
+ for(i = 1; i <= num; i++)
+ {
+  if(num%i == 0)
+  {
+    conte++;
+  }
+ }
+```
+Vamos supor __num=253__. O loop irá percorrer de i=1 a 253 e em cada iteração o número num=253 é dividido por i. Por exemplo:
+
+- __Iteração 1__: i=1, i menor que 253
+- Em *if num%i==0, 253%1==0*, o que é verdade
+- Em seguida, conte é incrementado com 1. Então, conte = 1;
+
+- __Iteração 2__: i=2, i menor que 253
+- Em *if num%i==0, 253%2==0*, o que é falso
+- Como a condição é falsa *conte continua o mesmo*, assim conte = 1;
+
+- __Iteração 3__: i=3, i menor que 253
+- Em *if num%i==0, 253%3==0*, o que é falso
+- Como a condição é falsa *conte continua o mesmo*, assim conte = 1;
+
+O programa continua assim até a *iteração 11*
+
+- __Iteração 11__: i=11, i menor que 253 
+- Em *if num%i==0, 253%11==0*, o que é verdadeiro
+- Em seguida, conte é incrementado com 1. Então, conte = 2;
+
+O programa continuará assim para cada divisor do número (253), *conte* será incrementado e neste caso existem 4 divisores ( 1, 11, 23, 253 ) até que i=253
+
+- Assim, conte = 4;
+
+4. 
+
+```c
+ if(conte==2)
+ {
+  printf("O valor digitado %d e um numero primo\n", num);
+ }
+ else
+ {
+  printf("O valor digitado %d nao e um numero primo porque ele e divisivel por\n", num);
+  for(i = 1; i <= num; i++)
+  {
+    if (num%i == 0)
+    {
+      printf("%d\n", i);
+    }
+  }
+ }
+```
+Quanto ao número primo haverá apenas 2 divisores: 1 e o próprio número; se o número for primo, *conte será 2* ou seja (conte = 2). Mas neste caso em que o número é 253, temos que (conte = 4) então a condição será __falsa__ e será feito o print que o número não é primo, assim, o programa exibirá seus divisores usando a mesma lógica que no caso de contar o número de divisores, exceto em vez de usar *conte* para incrementar usamos __printf__ para fazer o print dos valores dos divisores.
+
+__Output__
+
+![img](./div-prime.png)
 ____
 
