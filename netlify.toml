@@ -25,7 +25,7 @@
   package = "netlify-plugin-submit-sitemap"
 
 	[plugins.inputs]
-    baseUrl = "https://rad-blancmange-84a9a2.netlify.app/"
+    baseUrl = "https://www.aprendacpp.com/"
     sitemapPath = "/sitemap.xml"
     ignorePeriod = 0
     providers = [

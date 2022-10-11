@@ -2,17 +2,18 @@
 title: "Números Primos - Introdução e o School Method"
 description: "Nesta série de artigos descreveremos métodos, algoritmos e problemas para definir se um número é primo ou não."
 lead: "Nesta série de artigos descreveremos métodos, algoritmos e problemas para definir se um número é primo ou não."
-date: 2022-10-09T21:20:16-03:00
-lastmod: 2022-10-09T21:20:16-03:00
+date: 2022-10-11T00:16:28-03:00
+lastmod: 2022-10-11T00:16:28-03:00
 draft: false
 images: []
 menu:
   docs:
     parent: ""
-    identifier: "primality-test-set-1-6256742349dc75331ab6bc69a3b7115c"
+    identifier: "chapter-2-c1d0c286332b34a33e4ded0d08c91baf"
 weight: 2002
 toc: true
 ---
+
 ____
 
 ## O que são números primos ? 
@@ -395,4 +396,3 @@ __Output__
 
 ![img](./div-prime.png)
 ____
-

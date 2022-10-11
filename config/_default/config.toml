@@ -1,4 +1,4 @@
-baseurl = "https://rad-blancmange-84a9a2.netlify.app/"
+baseurl = "https://www.aprendacpp.com/"
 canonifyURLs = true
 disableAliases = true
 disableHugoGeneratorInject = true
