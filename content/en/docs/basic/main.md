@@ -71,3 +71,6 @@ main() // o tipo de retorno padrão do main em c++ é int
 O código acima não tem erro. Se você escrever toda a função main() livre de erros sem um statement de retorno no final, o compilador adicionará automaticamente um statement de retorno com o tipo de dados apropriado no final do programa.
 
 Resumindo o que foi dito acima, nunca é uma boa ideia usar ***void main()*** ou simplesmente ***main()***, pois não está de acordo com os padrões. Embora pode ser permitido por alguns compiladores.
+___
+
+Se existe alguma inconsistência ao foi descrito algo incorreto acima, por favor vá até __Help__ e nos envie seu comentário para que tudo que foi dito esteja claro e bem definido.

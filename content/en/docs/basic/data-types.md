@@ -1,5 +1,5 @@
 ---
-title: "C++ Data Types"
+title: "Data Types no C++"
 description: ""
 lead: ""
 date: 2022-09-27T15:07:22-03:00
@@ -13,24 +13,37 @@ menu:
 weight: 5
 toc: true
 ---
-
-## Data Types no C++
+____
+## C++ Data Types
 
 Todas as variáveis usam data type durante sua declaração para restringir o tipo de dados que serão armazenados. Portanto, podemos dizer que os data type são usados para informar às variáveis o que elas podem armazenar ou o tipo de dados que elas podem armazenar. Sempre que uma variável é definida em C++ o compilador aloca alguma memória para essa variável com base no data type com o qual ela é declarada, cada data type requer uma quantidade diferente de memória.
 
-O C++ suporta uma ampla variedade de data types e o programador pode selecionar as que sejam mais apropriadas as necessidades do aplicativo. Os data types especificam o tamanho e os tipos de valor a serem armazenados. No entanto, a representação de armazenamento e as instruções de máquina para manipular cada tipo de dados diferem de equipamento para equipamento, embora as instruções do C++ sejam idênticas em todas as máquinas.
+O C++ suporta uma ampla variedade de data types e o programador pode selecionar as que sejam mais apropriadas as necessidades do seu programa. Os data types especificam o tamanho e os tipos de valor a serem armazenados. No entanto, a representação de armazenamento e as instruções de máquina para manipular cada tipo de dados diferem de equipamento para equipamento, embora as instruções do C++ sejam idênticas em todas as máquinas.
 
 Os data types que o C++ suporta:
 
 - Primary or Built in or Fundamental data type - Data type primário, integrado ou fundamental.
+
 - Derived data type - data type derivados dos primary ou fundamental.
+
 - User defined data types - data types definidos pelo usuário.
 
-![img](./data-type-in-cpp.jpg)
+|                       | Data Type No C++ |                     |
+|:---------------------:|:----------------:|:-------------------:|
+|   **1. Fundamental**  |  **2. Derived**  | **3. User-Defined** |
+|        Integer        |     Function     |        Class        |
+|       Character       |       Array      |      Structure      |
+|        Boolean        |      Pointer     |        Union        |
+|     Floating Point    |     Reference    |         Enum        |
+| Double Floating Point |                  |       Typedef       |
+|          Void         |                  |                     |
+|     Wide Character    |                  |                     |
+
+## Fundamental DataTypes 
 
 Vamos analisar em detalhes cada um deles:
 
-1. Primary ou Primitive data types: Esses data types são internos(built-in) ou predefinidos e podem ser usados diretamente pelo usuário para declarar variáveis. Por exemplo: *int*, *char*, *float*, *bool*, etc. Data types primitivos no C++ são:
+1. __Primary__ ou __Primitive__ data types: Esses data types são internos (built-in) ou predefinidos e podem ser usados diretamente pelo usuário para declarar variáveis. Por exemplo: *int*, *char*, *float*, *bool*, etc. Data types primitivos no C++ são:
 
 - __Integer__: A key-word usada para tipos de dados integer (*inteiros*) é __int__. Os inteiros normalmente exigem 4 bytes de espaço de memória e variam de -2,147,483,648 a 2,147,483,647.
 
@@ -40,7 +53,7 @@ Vamos analisar em detalhes cada um deles:
 
 - __Floating Point__: O data type floating-point é usado para armazenar valores de precisão simples ou valores decimais. A key-word usada para o tipo de dados floating point é __float__. Variáveis float normalmente requerem 4 bytes de espaço de memória.
 
-- __Double Floating Point__: Como o nome sugere, o data type bouble floating point é usado para armazenar valores de precião duplos ou valores decimais. A key-word fos double floating point é __double__. Este data type normalmente requer 8 bytes de memória.
+- __Double Floating Point__: Como o nome sugere, o data type bouble floating point é usado para armazenar valores de precião duplos ou valores decimais. A key-word para o double floating point é __double__. Este data type normalmente requer 8 bytes de memória.
 
 - __Valueless or Void__: Void significa sem valor. O tipo de dados void representa uma entidade sem valor e portanto, é usado para aquelas funções que não retornam um valor.
 
@@ -80,241 +93,71 @@ int main()
     return 0;
 }
 ```
-## Prática
+____
 
-Dada uma String S, descubra qual dos seguintes data types básicos ela representa e seu tamanho (em bytes).
-Os data types possíveis são:
-1. Integer
-2. Float
-3. Double
-4. Character
+### Datatype Modifiers (Modificadores de data types)
 
-Exemplo 1.
-```bash
-Input:
-S=a
-Output:
-1
-Explicação:
-A string claramente representa o tipo char e assim o tamanho de char é exibido
-```
-Exemplo 2.
-```bash
-Input
-S=98.45685456
-Output: 
-8
-Explanation:
-A string representa um Double.
-```
-### Sua Tarefa
+Como o nome sugere, os modificadores de tipo de dados são usados com os **tipos de dados Primarios** para modificar o *comprimento* dos dados que um determinado data type pode conter.
 
-Sua tarefa é completar a função __BasicDataType__() que recebe a String S como parâmetro de entrada e exibe o tamanho (em bytes) do tipo de dados que ela representa.
-Copie o código abaixo e faça a tarefa:
+|                |  Modificadores No C++ |      |             |
+|:--------------:|:---------------:|:----------:|-------------|
+|  **_Signed_**  |  **_Unsigned_** | **_Long_** | **_Short_** |
+|     Integer    |     Integer     |   Integer  |   Integer   |
+|      Char      |       Char      |   Double   |             |
+| Long - prefixo | Short - prefixo |            |             |
 
-```c++
-#include <bits/stdc++.h>
-using namespace std;
+Resumindo os datatype modifiers no C++ são:
 
-class Solution {
-  public:
-    int BasicDataType(string s) {
-        // digite aqui
-    }
-};
+__Signed__
 
-int main() {
-    int t;
-    cin >> t;
-    while (t--) {
-        string S;
-        cin >> S;
+__Unsigned__
 
-        Solution ob;
-        cout << ob.BasicDataType(S) << endl;
-    }
-}
-```
-{{< details "Respostas:" >}}
+__Long__
+
+__Short__
+
+_____
+
+A tabela abaixo resume o tamanho modificado dos datatypes e o intervalo de tipos de dados primitivo quando combinados com os modificadores de type:
+
+|     **_Data Type_**    | **_Tamanho (em bytes)_** |         **_Intervalo_**         |
+|:----------------------:|:------------------------:|:-------------------------------:|
+|        short int       |             2            |         -32,768 - 32,767        |
+|   unsigned short int   |             2            |            0 - 65,535           |
+|      unsigned int      |             4            |        0 - 4,294,967,295        |
+|           int          |             4            |  -2,147,483,648 - 2,147,483,648 |
+|        long int        |             4            |  -2,147,483,648 - 2,147,483,648 |
+|    unsigned long int   |             4            |        0 - 4,294,967,295        |
+|      long long int     |             8            |       -(2^63) to (2^63)-1       |
+| unsigned long long int |             8            | 0 to 18,446,744,073,709,551,615 |
+|       signed char      |             1            |             0 to 255            |
+|          float         |             4            |                                 |
+|         double         |             8            |                                 |
+|       long double      |            12            |                                 |
+|         wchar_t        |          2 ou 4          |         1 wide character        |
+
+{{<  alert icon="⚠️" text="Os valores acima podem variar de compilador para compilador. No exemplo acima, consideramos o GCC de 32 bits." />}}
+____
+
+{{< alert icon="💡" text="Se você estiver confuso com o que estes data types significam, não se preocupe! Estamos apenas criando os fundamentos necessários sobre o C++. Precisaremos saber os data types corretamente para podermos depois declarar as variáveis sem erros. Sendo assim, a medida que você avançar com o C++, você pode voltar e rever com mais calma todos os data types e o seu correto uso." />}}
 
 ____
 
-Diferentes respostas seguem abaixo:
+### Resumo 
+
+C++ fornece um conjunto de data types. Cada variável deve ter um type. O tipo determina a quantidade de memória alocada para a variável, o intervalo de valores que podem ser atribuídos a ela e o tipo de operações que podem ser aplicadas a ela. O tamanho dos tipos depende da implementação, ou seja, pode variar entre os diferentes sistemas.
+
+Os tipos __char__, __short__, __int__ e __long__ são usados para armazenar valores integer, que podem ser signed or unsigned. Se adicionarmos a palavra __unsigned__ a variável não possui sign bit e pode armazenar apenas valores positivos ou zero. A palavra __int__ pode ser omitida, por exemplo, __long__ em vez de __long int__. Além disso, as palavras podem ser misturadas em qualquer ordem, por exemplo, a declaração __unsigned long int a;__ é o mesmo que __int long unsigned a;__.
+
+Com exceção do tipo __char__, todos os outros tipos são signed por padrão.
+
+Os caracteres são representados por códigos numéricos específicos. O tipo __char__ é normalmente usado para armazenar os códigos numéricos dos caracteres do conjunto básico, como o conjunto ASCII (por exemplo, ele inclui caracteres que aparecem no teclado, como dígitos, letras, sinais de pontuação, …). O tipo __wchar_t__ é usado para armazenar os códigos numéricos dos caracteres de um conjunto maior, como o Unicode.
+
+O tipo __bool__ tem dois valores possíveis, __true__ e __false__. Normalmente, uma variável __bool__ é usada para armazenar o resultado de uma ação, como se um valor é encontrado em uma array ou não.
+
+Os tipos __float__, __double__ e __long double__ são usados para armazenar valores com uma parte fracionária, ou seja, números __floating-point__. Ao contrário dos integer types, os floating-point são sempre signed. Embora o tipo __long double__ normalmente forneça a mais alta precisão, raramente é usado porque a precisão dos tipos __float__ e __double__ geralmente é suficiente.
+_____
+
+A seguir vamos estudar os __Tipos de Dados Derivados__.
+
 ____
-
-```c++
-#include <bits/stdc++.h>
-using namespace std;
-
-class Solution {
-  public:
-    int BasicDataType(string s) {
-       
-        int size = s.size();
-        // Se existe apenas 1 character ele será
-        if(size==1) 
-        {
-          // Ou int ou char
-            if(isdigit(s[0])) return sizeof(int);
-            else return sizeof(char);
-        }
-        for(int i=0; i<size; i++)
-        {
-          // Ou float e double
-            if(s[i]=='.')
-            {
-                if(size-1-i>=6) return sizeof(double);
-                return sizeof(float);
-            }
-        }
-        return sizeof(int);
-    }      
-};
-
-int main() {
-    int t;
-    cin >> t;
-    while (t--) {
-        string S;
-        cin >> S;
-
-        Solution ob;
-        cout << ob.BasicDataType(S) << endl;
-    }
-}
-```
-____
-
-```c++
-#include <bits/stdc++.h>
-using namespace std;
-
-class Solution {
-  public:
-    int BasicDataType(string s) {
-        // Digite aqui...
-        int i;
-        int n=s.size();
-        int char_size=1;
-        int float_size=4;
-        int double_size=8;
-        int integer_size=4;
-        // Se existe apenas um caractere significa int ou char
-        if(n==1)
-        {
-            if(isdigit(s[0]))
-            {
-                return integer_size;
-            }
-            else
-            {
-                return char_size;
-            }
-        }
-        // Ou float e double
-        for(i=0;i<s.size();i++)
-        {
-          if(s[i]=='.')
-          {
-              if(n-1-i>=6)
-              {
-                  return double_size;
-              }
-              else
-              {
-                  return float_size;
-              }
-          }
-        }
-        // Se não for float ou double será int;
-        return integer_size;
-    }
-};
-
-int main() {
-    int t;
-    cin >> t;
-    while (t--) {
-        string S;
-        cin >> S;
-
-        Solution ob;
-        cout << ob.BasicDataType(S) << endl;
-    }
-}
-```
-____
-
-```c++
-#include <bits/stdc++.h>
-using namespace std;
-
-class Solution {
-  public:
-     int BasicDataType(string s) {
-     int returnFloat = 0, returnDouble = 0, returnChar = 0, floatingPointIndex;
-       // digite aqui...
-       
-       // se o comprimento da string for 1 e não for um dígito, o data type será um char
-       if (s.length() == 1 && !isdigit(s[0]))
-       {
-           returnChar++;
-       }
-       
-       // passe por todos os itens na string e veja se algum deles é um ponto
-       for ( int i = 0; i < s.length(); i++)
-       {
-           if (s[i] == '.')
-           {
-               floatingPointIndex = i; // defina o index do ponto para a variável floatingPointIndex
-               
-               // verifique se o comprimento do subarray formado pelos itens após o ponto é menor que 6, 
-               // mas maior que 0, o data type é float
-               if (s.length() - 1 - floatingPointIndex > 0 && s.length() - 1 - floatingPointIndex < 6) 
-               {
-                   returnFloat++; 
-                   break;
-               }
-               else 
-               {
-                   // se o comprimento do subarray formado pelos itens após o ponto for maior que 6, 
-                   // o data type será double
-                   returnDouble++;
-               }
-           }
-       }
-       
-      if (returnChar != 0)
-      {
-          return sizeof(char);
-      }
-      else if (returnFloat != 0)
-      {
-          return sizeof(float);
-      }
-      else if (returnDouble != 0)
-      {
-          return sizeof(double);
-      }
-      else
-      {
-          // se nenhum data type definido corresponder ao input, o data type será int
-          return sizeof(int);
-      }
-    }
-};
-
-int main() {
-    int t;
-    cin >> t;
-    while (t--) {
-        string S;
-        cin >> S;
-
-        Solution ob;
-        cout << ob.BasicDataType(S) << endl;
-    }
-}
-```
-
-{{< /details >}}
