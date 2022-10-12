@@ -285,7 +285,7 @@ __Restrições__:
  - $1 ≤ N ≤ 10^9$
 ____
 
-Você pode enviar sua resposta no [GeeksforGeeks](https://practice.geeksforgeeks.org/problems/prime-number2314/1).
+Resolva o problema e você pode enviar sua resposta no [GeeksforGeeks](https://practice.geeksforgeeks.org/problems/prime-number2314/1).
 ____
 
 ## Aprenda um programa em C para saber se um número é primo ou não 
