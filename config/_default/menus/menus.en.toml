@@ -24,3 +24,8 @@
   name = "Traduções"
   url = "docs/translate/introduction/"
   weight = 50
+
+[[main]]
+  name = "Help"
+  url = "/docs/help/help/"
+  weight = 60
