@@ -4,7 +4,7 @@ description: "Este artigo ajuda a todos aqueles que querem começar com Programa
 lead: "Este artigo ajuda a todos aqueles que querem começar com Programação Competitiva. O único pré-requisito necessário é o conhecimento de uma linguagem de programação."
 date: 2022-10-12T22:24:19-03:00
 lastmod: 2022-10-12T22:24:19-03:00
-draft: true
+draft: false
 images: []
 menu:
   docs:
