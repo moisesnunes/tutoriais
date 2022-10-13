@@ -37,11 +37,20 @@ Uma função é um conjunto de instruções que recebem entradas (input), fazem 
 
 __Sintaxe Básica__:
 
-|                     |                    |                             |
-|:-------------------:|:------------------:|:---------------------------:|
-| **Tipo de Retorno** |                    | **Tipo do Parâmetro (int)** |
-|         int         |        CPP         |      ( int x, int y );      |
-|                     | **Nome da Função** |  **Nome do Parâmetro (x)**  |
+```
+#include <iostream>
+tipoRetorno nomeFuncao (arg1, arg2,...) {
+...; // corpo da função
+}
+int main()
+{...; // corpo da funcao principal main() }
+```
+onde:
+-  tipoRetorno é o tipo de dado retornado pela função;
+-  nomeFuncao é o nome atribuído à função;
+-  arg1, arg2,... são os argumentos (ou parâmetros) passados à função quando ela é chamada; cada argumento deve ser precedido pelo seu respectivo tipo;
+- corpo da funcao compreende às instruções da função.
+
 
 __Exemplo__:
 
