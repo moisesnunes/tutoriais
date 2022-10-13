@@ -1,16 +1,16 @@
 ---
-title: "Capítulo 1 - O que é Competitive Programming?"
+title: "O que é Competitive Programming?"
 description: "Este artigo ajuda a todos aqueles que querem começar com Programação Competitiva. O único pré-requisito necessário é o conhecimento de uma linguagem de programação."
 lead: "Este artigo ajuda a todos aqueles que querem começar com Programação Competitiva. O único pré-requisito necessário é o conhecimento de uma linguagem de programação."
-date: 2022-10-08T16:11:57-03:00
-lastmod: 2022-10-08T16:11:57-03:00
-draft: false
+date: 2022-10-12T22:24:19-03:00
+lastmod: 2022-10-12T22:24:19-03:00
+draft: true
 images: []
 menu:
   docs:
     parent: ""
-    identifier: "chapter-1-29ce934426b863f0e1797ba60653879b"
-weight: 2001
+    identifier: "competitive-a53944ffb8962b5e7a088ab2bfe85ca1"
+weight: 1999
 toc: true
 ---
 ## O que é Competitive Programming?

@@ -67,12 +67,44 @@ int main()
   // Chamando a função definda acima para achar o máximo dos dois números
   int maior = max(a, b);
 
-  cout << "maior e" << maior;
+  cout << " O Numero maior: " << maior;
   return 0;
 }
 ```
 __Output__
 
-```c
-maior é b
+```bash
+ O Numero maior: 20
 ```
+### Por que precisamos de funções?
+
+- As funções nos ajudam a *reduzir a **redundância*** do programa. Se a funcionalidade for executada em vários lugares no software, em vez de escrever o mesmo código, repetidamente, criamos uma função e a chamamos em qualquer lugar. Isso também ajuda na manutenção, pois precisamos alterar apenas um local se fizermos alterações futuras na funcionalidade.
+
+- As funções tornam o código **modular**. Considere um arquivo grande com muitas linhas de código, torna-se muito simples ler e usar o programa se o código for dividido em funções.
+
+- As funções fornecem **abstração**. Por exemplo, podemos usar funções de biblioteca sem nos preocupar com seu trabalho interno.
+
+### Declarando Funções
+
+Uma declaração de função informa ao compilador sobre o número de parâmetros que a função recebe, o tipos de dados de parâmetros, e retorna o tipo de função. Colocar nomes de parâmetros na declaração da função é opcional quando declaramos a função, mas é necessário colocá-los na definição. Abaixo está um exemplo de declarações de função.
+
+__Exemplo__:
+
+```c++
+// Função que pega dois integers como parâmetros
+// E retorna um integer
+int max(int, int);
+
+// Função que pega um pointer (ponteiro) int e uma variável int como parâmetros
+// E retorna um pointer de tipo int
+int* swap(int*, int);
+
+// Função que pega um char como parâmetro
+// E retorna um variável de referência
+char* call(char b);
+
+// Função que pega um char e int como parâmetros
+// E retorna um integer
+int fun(char, int);
+```
+### Tipos de funções

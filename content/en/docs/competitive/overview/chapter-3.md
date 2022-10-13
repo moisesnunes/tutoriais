@@ -1,5 +1,5 @@
 ---
-title: "Números Primos - Algoritmos para números menores que o N"
+title: "Números Primos - Algoritmos para números primos menores que N"
 description: "Aprenda várias algoritmos para achar todos os números primos menores que n."
 lead: "Aprenda várias algoritmos para achar todos os números primos menores que n."
 date: 2022-10-11T00:20:22-03:00
