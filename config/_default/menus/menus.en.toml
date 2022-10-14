@@ -1,4 +1,7 @@
 
+
+
+
 [[main]]
   name = "Começe Aqui"
   url = "/docs/basic/introduction/"
@@ -8,22 +11,28 @@
 [[main]]
   name = "Blog"
   url = "/blog/"
-  weight = 20
+  weight = 100
 
 [[main]]
   name = "Tutorial"
   url = "/docs/tutorial/basic/introduction/"
-  weight = 30
+  weight = 20
 
 [[main]]
   name = "Competitive programming"
   url = "/docs/competitive/competitive/"
-  wight = 40
+  identifier = "competitive"
+  weight = 40
+
+[[main]]
+  name = "Problemas e Algoritmos"
+  url = "/docs/problems/introduction/"
+  parent = "competitive"
 
 [[main]]
   name = "Traduções"
   url = "docs/translate/introduction/"
-  weight = 50
+  weight = 30
 
 [[main]]
   name = "Help"
