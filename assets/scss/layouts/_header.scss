@@ -479,6 +479,23 @@ button#doks-versions {
   color: inherit;
 }
 
+.hero-bg-bottom {
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  padding-top: 3rem;
+  z-index: -1;
+}
+
+/*---------------------- Media query ---------------------*/
+/* for larger than 650px screen */
+
+@media(max-width: 1350px){
+  .hero-bg-bottom{
+    display: none;
+  }
+}
+
 .social-link {
   padding-left: 0.5rem;
 
