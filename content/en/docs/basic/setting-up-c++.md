@@ -1,7 +1,7 @@
 ---
 title: "Configurando o ambiente de desenvolvimento C++"
-description: ""
-lead: ""
+description: "Antes de começarmos a programar com C++ precisaremos de um ambiente a ser configurado em nosso computador local para compilar e executar nossos programas com sucesso. Se você não deseja configurar um ambiente local, você também pode usar IDEs online para compilar seu programa."
+lead: "Antes de começarmos a programar com C++ precisaremos de um ambiente a ser configurado em nosso computador local para compilar e executar nossos programas com sucesso. Se você não deseja configurar um ambiente local, você também pode usar IDEs online para compilar seu programa."
 date: 2022-09-27T15:01:50-03:00
 lastmod: 2022-09-27T15:01:50-03:00
 draft: false
@@ -13,7 +13,7 @@ menu:
 weight: 2
 toc: true
 ---
-Antes de começarmos a programar com C++ precisaremos de um ambiente a ser configurado em nosso computador local para compilar e executar nossos programas com sucesso. Se você não deseja configurar um ambiente local, você também pode usar IDEs online para compilar seu programa.
+____
 
 __Usando IDE online__: IDE significa ambiente de desenvolvimento integrado. Existem muitos IDEs online disponíveis que você pode usar para compilar e executar seus programas facilmente sem configurar um ambiente de desenvolvimento local.
 
