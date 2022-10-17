@@ -13,3 +13,6 @@ menu:
 weight: 3001
 toc: true
 ---
+____
+
+1. [Bibliotecas de criptografia em C/C++20](./cryptography-libraries-c20.md)

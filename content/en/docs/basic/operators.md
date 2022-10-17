@@ -1,5 +1,5 @@
 ---
-title: "Operators in C++"
+title: "Operadores no C++"
 description: ""
 lead: ""
 date: 2022-09-27T15:37:30-03:00
