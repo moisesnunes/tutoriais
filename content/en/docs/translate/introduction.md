@@ -15,4 +15,4 @@ toc: true
 ---
 ____
 
-1. [Bibliotecas de criptografia em C/C++20](./cryptography-libraries-c20.md)
+1. [Melhores bibliotecas de criptografia em C/C++20](/docs/translate/cryptography-libraries-c20/)

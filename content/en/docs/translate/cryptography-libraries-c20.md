@@ -44,7 +44,6 @@ A Tabela abaixo mostra as bibliotecas de criptografia e seus recursos em diferen
 |       **Crypto++**       |                                   sim                                   |    sim    |    sim    |    sim    |      sim      |    sim   |     sim    |
 |         **Botan**        |                                   sim                                   |    sim    |    sim    |    sim    |      sim      |    sim   |     sim    |
 |       **Libcrypt**       |                                   sim                                   |    sim    |    sim    |    sim    |      sim      |    sim   |     sim    |
-|        **GnuTLS**        | A biblioteca representa a implementação dos protocolos TLS, SSL e DTLS. |           |           |           |               |          |            |
 |       **Cryptlib**       |                                   sim                                   |    sim    |    sim    |    sim    |      sim      |     -    |      -     |
 
 Agora, escolheremos aleatoriamente uma função hash de uma biblioteca (por exemplo, uma implementação MD5 do OpenSSL) e forneceremos alguns comentários sobre a implementação. É muito importante mencionar que a implementação fornecida para a função hash MD5 já está implementada no OpenSSL e isso será feito com respeito à implementação original de [1](https://www.openssl.org/source/). A primeira coisa a fazer é baixar o arquivo ***openssl -1.1.1g.tar.gz*** e extrair o conteúdo para ter acesso ao código fonte. Depois de extraído, navegue até a pasta crypto seguindo o caminho openssl-1.1.1g\crypto. Desta forma, você terá acesso aos arquivos de código fonte de todos os algoritmos criptográficos implementados dentro da biblioteca. Veja a figura abaixo.
@@ -95,14 +94,11 @@ openssl rsa -pubout -in alicePrivateKey.pem -out alicePublicKey.pem
 ```html
 openssl rsautl -encrypt -in cleartext -out encryptedWithAlicePubKey -inkey alicePublicKey.pem -pubin 
 ```
-![img]()
-
 4. Alice descriptografa a mensagem de Bob.
    
 ```html
 openssl rsautl -decrypt -in encryptedWithAlicePubKey -inkey alicePrivKey.pem
 ```
-![img]()
 ______
 
 ### Criptografia de curva elíptica (ECC)
@@ -180,3 +176,53 @@ Equal shared keys: True
 Devido à randomização, se você executar o código acima, as chaves serão diferentes, mas o segredo compartilhado calculado para Alice e Bob no final será sempre o mesmo. O segredo compartilhado gerado é um inteiro de 257 bits (ponto EC compactado para curva de 256 bits, codificado como 65 dígitos hexadecimais).
 
 ### Criando chaves ECDH
+
+É muito importante que primeiro verifiquemos qual suporte OpenSSL você tem em seu computador relacionados a chave ECDH. Para fazer isso, digite o seguindo comando no seu terminal:
+
+```html
+openssl ecparam -list_curves
+```
+O comando fornecerá uma lista completa de curvas que você pode usar, e a maioria delas são implementados adequadamente com respeito aos seus padrões. Sua implementação no OpenSSL e as atualizações recentes usando os novos recursos do C++20 os tornam fáceis de seguir.
+
+![img](./curves-list.png)
+*Veja a lista completa executando o comando no seu terminal*
+
+Temos uma maneira rápida de gerar o par de chaves usando o **prime256v1** com o seguinte comando:
+
+```html
+openssl ecparam -name prime256v1 -genkey -noout -out myKey.pem
+```
+![img](./ec-key.png)
+
+Isso deve fornecer um arquivo PEM contendo sua chave privada EC, que deve paracer com o seguinte:
+
+```html
+-----BEGIN EC PRIVATE KEY-----
+MHcCAQEEIBmkTf1F3t19l3hKpFRUNl0SdqXmlmFo6htO5EFlTu2UoAoGCCqGSM49
+AwEHoUQDQgAEuRUFJ+JrdzkzXppuMELz7Oc7wUqLvy+rJr8sb5f9HLGo8H5hJO9C
+bywgBGKuhxhZJAvx8vUeYaIjkc5drj4iag==
+-----END EC PRIVATE KEY-----
+```
+Agora que você tem sua chave privada, pode usá-la para gerar outro PEM, contendo apenas sua chave pública.
+
+```html
+openssl ec -in myKey.pem -pubout -out public-key.pem
+```
+![img](ec-public.png)
+
+Você terá agora outro arquivo PEM, contendo sua chave-pública:
+
+```html
+-----BEGIN PUBLIC KEY-----
+MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEuRUFJ+JrdzkzXppuMELz7Oc7wUqL
+vy+rJr8sb5f9HLGo8H5hJO9CbywgBGKuhxhZJAvx8vUeYaIjkc5drj4iag==
+-----END PUBLIC KEY-----
+```
+Se você quiser ver os detalhes do parâmetro EC, execute o seguinte comando:
+
+```html
+openssl ec -in mykey.pem -text -noout
+```
+![img](ec-details.png)
+_____
+
