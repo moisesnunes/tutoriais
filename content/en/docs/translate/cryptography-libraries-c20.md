@@ -44,6 +44,7 @@ A Tabela abaixo mostra as bibliotecas de criptografia e seus recursos em diferen
 |       **Crypto++**       |                                   sim                                   |    sim    |    sim    |    sim    |      sim      |    sim   |     sim    |
 |         **Botan**        |                                   sim                                   |    sim    |    sim    |    sim    |      sim      |    sim   |     sim    |
 |       **Libcrypt**       |                                   sim                                   |    sim    |    sim    |    sim    |      sim      |    sim   |     sim    |
+|        **GnuTLS**        | A biblioteca representa a implementação dos protocolos TLS, SSL e DTLS. |           |           |           |               |          |            |
 |       **Cryptlib**       |                                   sim                                   |    sim    |    sim    |    sim    |      sim      |     -    |      -     |
 
 Agora, escolheremos aleatoriamente uma função hash de uma biblioteca (por exemplo, uma implementação MD5 do OpenSSL) e forneceremos alguns comentários sobre a implementação. É muito importante mencionar que a implementação fornecida para a função hash MD5 já está implementada no OpenSSL e isso será feito com respeito à implementação original de [1](https://www.openssl.org/source/). A primeira coisa a fazer é baixar o arquivo ***openssl -1.1.1g.tar.gz*** e extrair o conteúdo para ter acesso ao código fonte. Depois de extraído, navegue até a pasta crypto seguindo o caminho openssl-1.1.1g\crypto. Desta forma, você terá acesso aos arquivos de código fonte de todos os algoritmos criptográficos implementados dentro da biblioteca. Veja a figura abaixo.
@@ -226,3 +227,4 @@ openssl ec -in mykey.pem -text -noout
 ![img](ec-details.png)
 _____
 
+Por favor, escreva para o email: (siteaprendacpp@gmail.com) se você encontrar algo incorreto ou se quiser compartilhar mais informações sobre o tópico discutido acima.

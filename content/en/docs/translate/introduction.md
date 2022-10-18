@@ -16,3 +16,5 @@ toc: true
 ____
 
 1. [Melhores bibliotecas de criptografia em C/C++20](/docs/translate/cryptography-libraries-c20/)
+
+2. [Guia completo a Criptografia de Curva Elíptica (ECC)](ecc.md)
