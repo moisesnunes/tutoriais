@@ -13,6 +13,8 @@ menu:
 weight: 9
 toc: true
 --- 
+____
+
 Basicamente podemos dizer que um operador opera os operandos. Por exemplo, ‘+’ é um operador usado para adição, conforme mostrado abaixo:
 
 ```html
@@ -24,13 +26,13 @@ A funcionalidade da linguagem de programação C/C++ é incompleta sem o uso de 
 
 Podemos classificar os operadores build-in no C/C++ como:
 
-1. __Operadores aritméticos__ (+, -, *, /, %)
+1. __Operadores Aritméticos__ (+, -, *, /, %)
    
 2. __Operadores Relacionais__ (==, !=, >, <, >=, <=)
    
-3. __Operadores lógicos__ (&&, ||, !)
+3. __Operadores Lógicos__ (&&, ||, !)
    
-4. __Operadores bit a bit__ (&, |, ^, ~, >>, <<)
+4. __Operadores Bit a Bit__ (&, |, ^, ~, >>, <<)
    
 5. __Operadores de Atribuição__ (=, +=, -=, *=)
    
@@ -325,6 +327,264 @@ int main()
 ____
 
 ## 4. Operadores BitWise (bit a bit)
+
+Os operadores Bitwise são usados para realizar operações em nível de bit nos operandos. Os operadores são primeiro convertidos em nível de bits e, em seguida, o cálculo é realizado nos operandos. Operações matemáticas como adição, subtração, multiplicação, etc. podem ser executadas no nível de bits para um processamento mais rápido. Por exemplo, o operador AND bit a bit representado como ‘&’ em C recebe dois números como operandos e faz AND em cada bit de dois números. O resultado de AND é 1 somente se ambos os bits forem 1(True).
+
+```html
+int a = 5, b = 9; // a = 5(00000101), b = 9(00001001)
+cout << (a ^ b); // 00001100
+cout << (~a); // 11111010
+```
+1. O & (AND(E) bitwise) em C ou C++ recebe dois números como operandos e faz AND em cada bit de dois números. O resultado de AND é 1 somente se ambos os bits forem 1.
+
+2. O | (OR(OU) bitwise) em C ou C++ recebe dois números como operandos e faz OR em cada bit de dois números. O resultado de OR é 1 se qualquer um dos dois bits for 1.
+
+3. O ^ (XOR bitwise) em C ou C++ recebe dois números como operandos e faz XOR em cada bit de dois números. O resultado de XOR é 1 se os dois bits forem diferentes.
+
+4. O << (Left Shift (deslocamento para a esquerda)) em C ou C++ leva dois números, desloca para a esquerda os bits do primeiro operando, o segundo operando decide o número de casas a serem deslocadas.
+
+5. O >> (Right Shift (deslocamento para a direita)) em C ou C++ leva dois números, desloca para a direita os bits do primeiro operando, o segundo operando decide o número de casas a serem deslocadas.
+
+6. O ~ (NOT(NÃO) bitwise) em C ou C++ pega um número e inverte todos os bits dele.
+
+Para mais informações dos operadores [bitwise](https://en.wikipedia.org/wiki/Bitwise_operation).
+
+Exemplo:
+
+```c++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  // a = 5(00000101), b = 9(00001001)
+  int a = 5, b = 9;
+
+  cout << "a = " << a << " , " << "b = " << b << endl;
+
+  // AND // 00000001
+  cout << "\na & b = " << (a & b) << endl;
+  // OR // 00001101
+  cout << "\na | b = " << (a | b) << endl;
+  // XOR // 00001100
+  cout << "\na ^ b = " << (a ^ b) << endl;
+  // NOt // 11111010
+  cout << "\n~a = " << (~a) << endl;
+  // Left Shift // 00010010
+  cout << "\nb << 1 = " << (b << 1) << endl;
+  // Right Shift // 00000100
+  cout << "\nb >> 1 = " << (b >> 1) << endl;
+
+  return 0; 
+}
+```
+- O operador bitwise XOR é o operador mais útil do ponto de vista técnico. É usado em muitos problemas. Um exemplo simples poderia ser “Dado um conjunto de números onde todos os elementos ocorrem um número par de vezes, exceto um número, encontre o número ímpar”.
+
+```c++
+#include<iostream>
+using namespace std;
+
+// Função que retorna o único valor ímpar em ocorrência
+int findOdd(int arr[], int n)
+{
+  int res = 0 , i;
+  for (i = 0; i < n; i++)
+      res ^= arr[i];
+  return res;
+} 
+
+// Teste
+int main()
+{
+  int arr[] = {2,2,4,4,5,2,2,4,4,};
+  int n = sizeof(arr) / sizeof(arr[0]);
+  cout << "O elemento impar de ocorrencia: " << findOdd(arr, n);
+  return 0;
+}
+```
+- Os operadores bit a bit não devem ser usados no lugar de operadores lógicos. O resultado dos operadores lógicos (&&, || e !) é 0 ou 1, mas os operadores bit a bit retornam um valor inteiro. Além disso, os operadores lógicos consideram qualquer operando diferente de zero como 1. Por exemplo, considere o programa a seguir, os resultados de & e && são diferentes para os mesmos operandos.
+
+```c++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  int x = 1, y = 2;
+  (x & y) ? cout << "Verdadeiro" : cout << "Falso";
+  (x && y) ? cout << "\nVerdadeiro" : cout << "Falso";
+  return 0;
+}
+```
+- Os operadores de deslocamento à esquerda e deslocamento à direita são equivalentes à multiplicação e divisão por 2, respectivamente. Como mencionado antes, funciona apenas se os números forem positivos.
+
+```c++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  int x = 20;
+  // Multiplicação por 2
+  cout << "x << 1: " << ( x << 1) << endl;
+  // Divisão por 2
+  cout << "x >> 1: " << (x >> 1) << endl;
+  return 0;
+}
+```
+- O operador & pode ser usado para verificar rapidamente se um número é par ou ímpar. O valor da expressão (x & 1) seria diferente de zero somente se x for ímpar, caso contrário o valor seria zero.
+
+```c++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  int x = 20;
+  (x & 1) ? cout << "Impar" : cout << "Par";
+  return 0;
+}
+``` 
+____
+
+## 5. Operadores de Atribuição
+
+Os operadores de atribuição são usados para atribuir valor a uma variável. O lado esquerdo do operador de atribuição é uma variável e o do lado direito do operador de atribuição é um valor. O valor do lado direito deve ser do mesmo tipo de dados que a variável do lado esquerdo, caso contrário o compilador irá gerar um erro.
+
+### 5.1 '='
+
+Este é o operador de atribuição mais simples. Este operador é usado para atribuir o valor da variável à direita para a variável à esquerda.
+
+```html
+a = 10;
+b = 5;
+```
+### 5.2 '+='
+
+Este operador é a combinação dos operadores ‘+’ e ‘=’. Esse operador primeiro adiciona o valor atual da variável à esquerda ao valor à direita e, em seguida, atribui o resultado à variável à esquerda.
+
+```html
+(a += b) é o mesmo que (a = a + b)
+(x += 3) é o mesmo que (x = x + 3)
+Se 5 = x, então, x += 3 = 8;
+```
+### 5.3 '-='
+
+Este operador é uma combinação dos operadores '-' e '='. Este operador primeiro subtrai o valor à direita do valor atual da variável à esquerda e, em seguida, atribui o resultado à variável à esquerda.
+
+```html
+(a -= b) é o mesmo que (a = a -b)
+(x -= 3) é o mesmo que (x = x -3)
+Se 5 = x, então, x -= 3 = 2;
+```
+### 5.4 '*='
+
+Este operador é uma combinação dos operadores '*' e '='. Esse operador primeiro multiplica o valor atual da variável à esquerda pelo valor à direita e, em seguida, atribui o resultado à variável à esquerda.
+
+```html
+(a *= b) é o mesmo que (a = a * b)
+(x *= 3) é o mesmo que (x = x * 3)
+Se 5 = x, então, x *= 3 = 15;
+```
+### 5.5 '/='
+
+Este operador é uma combinação dos operadores '/' e '='. Esse operador primeiro divide o valor atual da variável à esquerda pelo valor à direita e, em seguida, atribui o resultado à variável à esquerda.
+
+```html
+(a /= b) é o mesmo que (a = a / b)
+(x /= 3) é o mesmo que (x = x / 3)
+Se 5 = x, então, x /= 3 = 1.66667;
+```
+____
+
+## 6. Outros Operadores
+
+Além dos operadores acima, existem alguns outros operadores disponíveis em C/C++ usados para realizar algumas tarefas específicas.
+
+### 6.1 Operador Sizeof
+
+- sizeof é muito usado na linguagem de programação C/C++.
+- É um operador unário de tempo de compilação que pode ser usado para calcular o tamanho de seu operando.
+- O resultado de sizeof é do tipo integral que geralmente é denotado por size_t.
+- Basicamente, o operador sizeof é usado para calcular o tamanho da variável.
+  
+### 6.2 Operador Vírgula
+
+- O operador vírgula é um operador binário que avalia seu primeiro operando e descarta o resultado, então avalia o segundo operando e retorna este valor e tipo.
+- O operador vírgula tem a menor precedência de qualquer operador C.
+- A vírgula atua como operador e separador.
+
+### 6.3 Operador Condicional
+
+- O operador condicional tem a forma Expressão1? Expressão2 : Expressão3.
+- Aqui, Expressão1 é a condição a ser avaliada. Se a condição (Expressão1) for Verdadeira, executaremos e retornaremos o resultado da Expressão2, caso contrário, se a condição (Expressão1) for falsa, executaremos e retornaremos o resultado da Expressão3.
+- Podemos substituir o uso de instruções if..else por operadores condicionais.
+  
+### 6.4 Operadors ponto(.) e seta(->)
+
+- Os operadores de membro são usados para fazer referência a membros individuais de classes, estruturas e uniões.
+- O operador ponto é aplicado ao objeto real.
+- O operador de seta é usado com um ponteiro para um objeto.
+
+### 6.5 Operador de Conversão
+
+- Os operadores de conversão convertem um tipo de dados em outro. Por exemplo, int(2.2000) retornaria 2.
+- Um cast é um operador especial que força um tipo de dado a ser convertido em outro.
+- A conversão mais geral suportada pela maioria dos compiladores C é a seguinte − [ (tipo) expressão ].
+
+### 6.6 Operador Pointer *,&
+
+- Operador de ponteiro & retorna o endereço de uma variável. Por exemplo &a; fornecerá o endereço real da variável.
+- Operador de ponteiro * é um ponteiro para uma variável. Por exemplo *var; apontará para uma variável var.
+_____
+
+Por favor, escreva para o email: (siteaprendacpp@gmail.com) se você encontrar algo incorreto ou se quiser compartilhar mais informações sobre o tópico discutido acima.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
