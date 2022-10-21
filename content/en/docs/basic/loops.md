@@ -1,7 +1,7 @@
 ---
 title: "Loops ou Laços no C++"
 description: "Em um programa quando precisamos executar uma tarefa repiditas vezes usamos os loops para fazê-lo, a repetição continua enquanto a condição for verdadeira, quando a condição se torna falsa, o loop termina e o programa prossegue com seu controle. Em C++, existem três tipos de loops: for, while, e do."
-lead: "Em um programa quando precisamos executar uma tarefa repiditas vezes usamos os loops para fazê-lo, a repetição continua enquanto a condição for verdadeira, quando a condição se torna falsa, o loop termina e o programa prossegue com seu controle. Em C++, existem três tipos de loops: for, while, e do."
+lead: "Em um programa quando precisamos executar uma tarefa repiditas vezes usamos os loops para fazê-lo, a repetição continua enquanto a condição for verdadeira, quando a condição se torna falsa, o loop termina e o programa prossegue com seu controle. Em C++, existem três tipos de loops: for, while, e do-while."
 date: 2022-09-27T15:38:18-03:00
 lastmod: 2022-09-27T15:38:18-03:00
 draft: false
@@ -21,7 +21,7 @@ Vamos supor que queremos fazer o print do "Hello World" 5 vezes, existem duas fo
 
 __Método Manual ou Método Iterativo__
 
-Manualmente, teriamos que escrever a instrução cout 5 vezes. Em outro caso poderiamos ter que escrever 10, 15 ou mais vezes, o que seria bem repetitivo e completamente ineficiente. Para que isso não seja necessário, os loops forma criados.
+Manualmente, teriamos que escrever a instrução cout 5 vezes. Em outro caso poderiamos ter que escrever 10, 15 ou mais vezes, o que seria bem repetitivo e completamente ineficiente. Para que isso não seja necessário, os loops foram criados.
 
 ```c++
 #include<iostream>
@@ -104,15 +104,17 @@ for (int i = 0; i < n; i++)
   // corpo
 }
 ```
-Observe que a expressão de inicialização é executada apenas uma vez, enquanto a expressão de teste e executada toda vez que o corpo do loop é executado. Já a expressaõ atualize ou incremento atualiza a variável do loop após cada execução do corpo do loop, enquanto a condição de teste for avaliada como verdadeira. 
+Observe que a expressão de inicialização é executada apenas uma vez, enquanto a expressão de teste é executada toda vez que o corpo do loop é executado. Já a expressão atualize ou incremento atualiza a variável do loop após cada execução do corpo do loop, enquanto a condição de teste for avaliada como verdadeira. 
 
-- Expressão de inicialização: Nesta expressão, temos que inicializar o contador de loops com algum valor. por exemplo: int i = 1;
+- __Expressão de inicialização__: Nesta expressão, temos que inicializar o contador de loops com algum valor. por exemplo: int i = 1;
   
-- Expressão de teste: Nesta expressão, temos que testar a condição. Se a condição for verdadeira, executaremos o corpo do loop e iremos atualizar a expressão, caso contrário, sairemos do loop. por exemplo: i <= 10;
+- __Expressão de teste__: Nesta expressão, temos que testar a condição. Se a condição for verdadeira, executaremos o corpo do loop e iremos atualizar a expressão, caso contrário, sairemos do loop. por exemplo: i <= 10;
   
-- Expressão de incremento(atualize): Depois de executar o corpo do loop, esta expressão incrementa/diminui a variável do loop em algum valor. por exemplo: i++; 
+- __Expressão de incremento(atualize)__: Depois de executar o corpo do loop, esta expressão incrementa/diminui a variável do loop em algum valor. por exemplo: i++; 
 
 ![img](./loop-for.png)
+
+Veja um exemplo abaixo.
 
 Exemplo:
 
@@ -142,9 +144,9 @@ Valor do quadrado 3 = 9
 Valor do quadrado 4 = 16
 Valor do quadrado 5 = 25
 ```
-No exemplo acima pedimos ao usúario para digitar um valor inteiro (n), em seguinda o programa faz n iterações usando o loop for. A cada iteração (expressaõ de teste) o programa calcula o quadrado de i. 
+No exemplo acima pedimos ao usúario para digitar um valor inteiro (n), em seguinda o programa faz n iterações usando o loop for. A cada iteração (expressão de teste) o programa calcula o quadrado de i. 
 
-Observe que o loop for contém uma única instrução, calcular o quadrado de i. No entanto, temos casos em que mais de instrução pode ser dada no corpo do loop. Nesse caso, múltiplas instruções devem ser delimitadas por chaves {}. Veja um exemplo.
+Observe que o loop for contém uma única instrução, calcular o quadrado de i. No entanto, temos casos em que mais de uma instrução pode ser dada no corpo do loop. Nesse caso, múltiplas instruções devem ser delimitadas por chaves {}. Veja um exemplo.
 
 Exemplo:
 
@@ -257,7 +259,7 @@ Hello World!
 ```
 Note que a expressão de atualização é usada para terminar o loop, quando i for igual a 5 a condição foi satisfeita e o loop deve terminar, caso o contrário, o loop seguirá indefinidamente.
 
-Neste outro exemplo, o programa solicita que o usuário digite um número inteiro qualquer ou 0 para encerrar o loop. Enquanto isso não ocorre, o programa fica em loop, aguardando a entrada de outro número.
+Neste outro exemplo, o programa solicita que o usuário digite o número 0 para encerrar o loop, enquanto isso não ocorre, o programa fica em loop, aguardando a entrada de outro número.
 
 Exemplo:
 
@@ -295,6 +297,197 @@ Voce digitou 0 e acabou o loop
 Podemos ainda usar o loop while para descobrir o fatorial de cada número até n, veja o exemplo abaixo:
 
 ```c++
+#include<iostream>
+#include<iomanip>
+using namespace std;
 
+int main()
+{
+    int i = 1; // define e inicializa a variável de loop
+    int n; // define o número de iterações do loop
+    int fatorial = 1; // define a variável fatorial
+    cout << "Digite um valor: ";
+    cin >> n;
+    cout << "\nValor" << setw(5) << " Fatorial" << endl;
+    while(i <= n) // loop de 1 até a n
+    {
+        cout << setw(3) << i;
+        fatorial *= i; // Calcula o fatorial de n
+        cout << setw(7) << fatorial << endl;
+        ++i;
+    }
+    return 0;
+}
 ```
+Output:
+
+```html
+Digite um valor: 5
+
+Valor Fatorial
+  1      1
+  2      2
+  3      6
+  4     24
+  5    120
+```
+____
+
+## Loop do while
+
+Nos loops do-while, também a execução do loop é encerrada com base nas condições de teste. A principal diferença entre um loop do-while e o loop while está no fato de que a condição é testada no final do corpo do loop, ou seja, o loop do-while é controlado por saída enquanto os outros dois loops são controlados por entrada.
+
+Note que existem situações em que é necessário que o loop seja executado pelo menos uma vez, indepedente do teste inicial. Nesse caso, a expressão de teste deve ser colocado no fim do loop, e, portanto, deve-se usar o loop do-while.
+
+Sintaxe:
+
+```html
+expressaõ de inicialização
+do
+{
+  // declarações
+
+  atualize a expressão
+} while (expressão de teste);
+```
+![img](./do-while-loop.png)
+
+Exemplo:
+
+```c++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int i = 2; // expressão de inicialização
+
+    do
+    {
+        //corpo do loop
+        cout << "Hello World";
+        
+        // expressão de incremento
+        i++;
+
+    } while (i < 1); // expressão de teste
+    
+    return 0;
+}
+```
+Output
+
+```html
+Hello World
+```
+No programa acima, a condição de teste (i < 1) é avaliada como falsa. Mas ainda assim como o loop é controlado por saída, o corpo do loop será executado uma vez.
+
+Abaixo temos um exemplo em que após duas operações de cálculo, pedimos ao usúario se ele deseja continuar, se sim, usaremos o while para voltar ao loop, se não, o programa termina. Note também que as instruções dentro do corpo de 'do' será executada pelo menos uma vez.
+
+Exemplo:
+
+```c++
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+int main()
+{
+    int i = 1; // valor inicial da variável de loop
+    int n; // definine o número de iterações do loop
+    char entrada; // variável de sim ou não
+    do // loop de 1 até n
+    {
+        cout << "\nDigite um valor: ";
+        cin >> n;
+            cout << "\nQuadrado de " << n << " = " << n * n << endl;
+            cout << "\nRaiz de " << n << " = " << sqrt(n) << endl;
+        cout << "\nDeseja repitir: sim ou nao ? (s/n) ";
+        cin >> entrada;
+    }   while ( entrada != 'n');
+
+    return 0;
+}
+```
+Output:
+
+```html
+Digite um valor: 5
+
+Quadrado de 5 = 25
+
+Raiz de 5 = 2.23607
+
+Deseja repitir: sim ou nao ? (s/n) s
+
+Digite um valor: 25
+
+Quadrado de 25 = 625
+
+Raiz de 25 = 5      
+
+Deseja repitir: sim ou nao ? (s/n) n
+```
+____
+
+### E se tivermos um loop infinito ?
+
+Um loop infinito é um pedaço do programa que não possui uma saída funcional o que faz com que ele se repita indefinidamente. Um loop infinito ocorre quando uma condição é sempre avaliada como verdadeira. Normalmente, isso é um erro.
+
+Loop infinito com for:
+
+```c++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  int i;
+
+  for (;;) // expressão em branco
+  {
+     cout << "Esse loop continuara indefinidamente.\n";
+  }
+  return 0;
+}
+```
+Output
+
+```html
+Esse loop continuara indefinidamente.
+Esse loop continuara indefinidamente.
+Esse loop continuara indefinidamente.
+```
+No exemplo acima teremos um loop infinito porque todas as expressões estão em branco.
+
+____
+
+### Pontos Importantes
+
+- Use o loop ***for*** quando um número de iterações é conhecido de antemão, ou seja, o número de vezes que o corpo do loop precisa ser executado é conhecido.
+
+- Use loop ***while*** quando o número exato de iterações não é conhecido, mas a condição de término do loop é conhecida.
+
+- Use o loop ***do-while*** se o programa precisa ser executado pelo menos uma vez como nos programas usados em menus.
+
+_____
+
+Por favor, escreva para o email: (siteaprendacpp@gmail.com) se você encontrar algo incorreto ou se quiser compartilhar mais informações sobre o tópico discutido acima.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

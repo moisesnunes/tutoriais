@@ -13,6 +13,7 @@ menu:
 weight: 4
 toc: true
 ---
+___
 
 ## É correto escrever void main() ou main() em C/C++?
 
