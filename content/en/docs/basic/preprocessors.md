@@ -54,7 +54,8 @@ int main()
 }
 ```
 Output:
-```python
+
+```html
 0
 1
 2
@@ -87,7 +88,7 @@ int main()
 ```
 Output:
 
-```python
+```html
 Area do retangulo: 50
 ```
 Podemos ver no programa acima que sempre que o compilador encontra AREA(l, b) ele a substitui pela instrução (l * b). Não apenas isso, mas os valores passados para o modelo de macro AREA(l, b) também serão substituídos na instrução (l * b). Portanto, AREA(10, 5) será igual a 10 * 5.
@@ -102,7 +103,7 @@ Esses arquivos contêm definições de funções pré-definidas como *printf()*,
 
 Sintaxe:
 
-```python
+```html
 #include<nome_do_arquivo>
 ```
 Os colchetes '<' e '>' dizem ao compilador para procurar o arquivo no diretório do padrão.
@@ -111,7 +112,7 @@ Os colchetes '<' e '>' dizem ao compilador para procurar o arquivo no diretório
 
 Quando um programa se torna muito grande, é uma boa prática dividi-lo em arquivos menores e incluí-los sempre que necessário. Esses tipos de arquivos são arquivos definidos pelo usuário. Assim, esses arquivos podem ser incluídos como:
 
-```python
+```html
 #include"nomedoarquivo"
 ```
 As aspas "" dizem ao compilador para procurar o arquivo no diretório atual do programa.
@@ -122,7 +123,7 @@ As diretivas de compilação condicional são um tipo de diretiva que ajuda a co
 
 Sintaxe
 
-```python
+```html
 #ifdef nome_da_macro
   declaração1;
   declaração2;
@@ -193,14 +194,14 @@ int main()
 ```
 Output:
 
-```python
+```html
 Mostre func1()
 Mostre main()
 Exit func2()
 ```
 Nos compiladores GCC teremos o output abaixo:
 
-```python
+```html
 Mostre main()
 ```
 Isso acontece porque o GCC não suporta a diretiva #pragma startup or exit, [veja quais pragmas o gcc suporta](https://gcc.gnu.org/onlinedocs/gcc/Pragmas.html).
@@ -238,7 +239,7 @@ int main()
 ```
 Output:
 
-```python
+```html
 Mostre func1()
 Mostre main()
 Exit func2()
@@ -249,7 +250,7 @@ Esta diretiva é usada para ocultar a mensagem de aviso exibida durante a compil
 
 Sintaxe:
 
-```python
+```html
 #pragma warn +xxx (Mostrar o aviso)
 #pragma warn -xxx (Esconder o aviso)
 #pragma warn .xxx (Para alternar entre ocultar e mostrar)
@@ -285,7 +286,7 @@ int main()
 ```
 Output:
 
-```python
+```html
 Pragma
 ```
 ____

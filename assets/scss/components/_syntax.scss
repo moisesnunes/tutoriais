@@ -8,8 +8,8 @@ Based on Ascetic by (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
   display: block;
   overflow-x: auto;
   padding: 1.25rem 1.5rem;
-  background: $beige;
-  color: $body-color;
+  background: $black;
+  color: $beige;
 }
 
 .hljs-string,
@@ -21,7 +21,7 @@ Based on Ascetic by (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
 .hljs-addition,
 .hljs-attribute,
 .hljs-link {
-  color: $black;
+  color: $beige;
 }
 
 .hljs-comment,

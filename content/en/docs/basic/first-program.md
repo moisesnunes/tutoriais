@@ -35,14 +35,16 @@ using namespace std;
 // A função main() aqui começa a execução do programa 
 int main()
 {
-  cout << "Hello World";
+  cout << "Hello World!";
   // print Hello World
   return 0;
 }
 ```
-__Resultado__:
+Output:
 
-![img](./hello.png)
+```html
+Hello World!
+```
 
 Vamos agora entender cada linha e as terminologias do programa acima:
 
