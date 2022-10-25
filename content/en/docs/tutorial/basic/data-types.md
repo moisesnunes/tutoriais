@@ -284,8 +284,6 @@ Output:
 
 ![img](./enum.png)
 
-___
-
 ## Conclusão
 
 Você aprendeu vários data types em C++, definitivamente, eles são a base de qualquer linguagem de programação. Sem declarar variáveis com data types ou tipos de dados específicos, não podemos saber as alocações exatas de memória e qual conjunto de instruções um programa deve fazer. Pratique e tente usar diferentes tipos de dados com modificadores e verifique como eles se comportão de máneiras diferentes.
