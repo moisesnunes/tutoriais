@@ -17,4 +17,10 @@
   translation: "Browse"
 
 - id: tutorial
-  translation: "Vamos lá"
+  translation: "Tutorial"
+
+- id: traducoes
+  translation: "Traduções"
+
+- id: competitive
+  translation: "Competição"
