@@ -26,6 +26,11 @@
   parent = "competitive"
 
 [[main]]
+  name = "Programas com C++"
+  url = "/docs/programas/basic/programas-basicos/"
+  parent = "competitive"
+
+[[main]]
   name = "Traduções"
   url = "docs/translate/introduction/"
   weight = 30
