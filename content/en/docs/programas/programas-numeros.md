@@ -20,5 +20,122 @@ _____
 ## Soma de N números 
 
 ```c++
+#include<iostream>
+using namespace std;
 
+int main()
+{
+    int a, soma = 0;
+    cout << "Digite um numero: ";
+    cin >> a;
+    for (int i = 0; i <= a; i++)
+    {
+        soma+=i; // soma = soma + i
+    }
+    cout << "Soma de todos os numeros ate "<< a << ": " << soma;
+    return 0;
+}
 ```
+Resultado:
+
+```html
+Digite um numero: 100
+Soma de todos os numeros ate 100: 5050
+```
+____
+
+## Soma de todos os digítos de um número 
+
+```c++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int depois, x, n, soma=0; // depois é a variável que será chamada quando o loop acabar, n>0.
+                              // x para armazenar n%10
+    cout << "Digite um numero: ";
+    cin >> n;
+    depois = n; // n se torna 0 no final do programa, assim precisamos de outra variável para restaurá-lo.
+    while (n > 0)
+    {
+        x = n % 10; 
+        soma+=x;
+        n = n / 10;
+    }
+    cout << "A soma de todos os digitos de: " << depois << " e " << soma;
+    return 0;
+}
+```
+Resultado:
+
+```html
+Digite um numero: 1234
+A soma de todos os digitos de: 1234 e 10
+```
+____
+
+## Print o reverso de qualquer número 
+
+```c++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int depois, x, n, rev=0;
+    cout << "Digite um numero: ";
+    cin >> n;
+    depois = n;
+    while (n > 0)
+    {
+        x = n % 10;
+        rev = rev * 10 + x;
+        n = n / 10;
+    }
+    cout << "O numero reverso de: " << depois << " e " << rev;
+    return 0;
+}
+```
+Resultado:
+
+```html
+Digite um numero: 1234
+O numero reverso de: 1234 e 4321
+``` 
+____
+
+## Soma de todos os inteiros divisíveis por 2
+
+```c++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int num1, num2, soma=0;
+    cout << "Digite o primeiro numero: ";
+    cin >> num1;
+    cout << "Digite o segundo numero: ";
+    cin >> num2;
+    for (int i = num1; i <= num2; i++)
+    {
+        if (i % 2 == 0)
+        { 
+            soma+=i;
+        }
+    }
+    cout << "O soma de todos os inteiros divisiveis por 2 entre " << num1 << ", " << num2 << " e: " << soma << endl;
+    return 0;
+}
+```
+resultado:
+
+```html
+Digite o primeiro numero: 1
+Digite o segundo numero: 5
+O soma de todos os inteiros divisiveis por 2 entre 1, 5 e: 6
+```
+____
+
+
