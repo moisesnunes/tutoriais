@@ -15,6 +15,8 @@ toc: true
 ---
 ____
 
+{{< alert icon="💡" text="Por favor, Recarregue a página para ver os novos conteúdos." />}}
+
 O C++ vem com bibliotecas que nos fornecem muitas maneiras de realizar *Inputs* e *Outputs*, a entrada (input) e a saída (output) são executadas na forma de uma sequência de bytes ou mais comumente conhecida como **streams**.
 
 - **Input Stream**: Se a direção do fluxo de bytes for do dispositivo (por exemplo, teclado) para a memória principal, esse processo é chamado de entrada (input).

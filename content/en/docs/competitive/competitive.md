@@ -13,6 +13,10 @@ menu:
 weight: 1999
 toc: true
 ---
+____
+
+{{< alert icon="💡" text="Por favor, Recarregue a página para ver os novos conteúdos." />}}
+
 ## O que é Competitive Programming?
 
 A programação competitiva combina dois tópicos: o design de algoritmos e a implementação de algoritmos.

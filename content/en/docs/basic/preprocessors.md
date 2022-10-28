@@ -15,6 +15,8 @@ toc: true
 ---
 ____
 
+{{< alert icon="💡" text="Por favor, Recarregue a página para ver os novos conteúdos." />}}
+
 ## Conceitos Básicos dos Pré-Processadores
 
 ![img](./preprocessor-compiler.jpg)

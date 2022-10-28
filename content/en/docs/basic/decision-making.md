@@ -15,6 +15,9 @@ toc: true
 ---
 ____
 
+{{< alert icon="💡" text="Por favor, Recarregue a página para ver os novos conteúdos." />}}
+
+
 Por exemplo, se x ocorrer então execute y senão execute z. Também pode haver várias condições, se x ocorrer, execute p, caso contrário, se a condição y ocorrer, execute q, caso contrário, execute r.
 
 Decisões em C++ podem ocorrer de várias formas. Dentre elas, a mais importante é a instrução *if... else*, a qual escolhe uma entre duas alternativas.

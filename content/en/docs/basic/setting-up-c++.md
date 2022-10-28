@@ -15,6 +15,8 @@ toc: true
 ---
 ____
 
+{{< alert icon="💡" text="Por favor, Recarregue a página para ver os novos conteúdos." />}}
+
 __Usando IDE online__: IDE significa ambiente de desenvolvimento integrado. Existem muitos IDEs online disponíveis que você pode usar para compilar e executar seus programas facilmente sem configurar um ambiente de desenvolvimento local.
 
 Recomendamos que você use o [GeeksforGeek IDE](https://ide.geeksforgeeks.org/).

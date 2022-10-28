@@ -13,8 +13,9 @@ menu:
 weight: 2002
 toc: true
 ---
-
 ____
+
+{{< alert icon="💡" text="Por favor, Recarregue a página para ver os novos conteúdos." />}}
 
 ## O que são números primos ? 
 

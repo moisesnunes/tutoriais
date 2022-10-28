@@ -14,6 +14,9 @@ weight: 5
 toc: true
 ---
 ____
+
+{{< alert icon="💡" text="Por favor, Recarregue a página para ver os novos conteúdos." />}}
+
 ## C++ Data Types
 
 Todas as variáveis usam data type durante sua declaração para restringir o tipo de dados que serão armazenados. Portanto, podemos dizer que os data type são usados para informar às variáveis o que elas podem armazenar ou o tipo de dados que elas podem armazenar. Sempre que uma variável é definida em C++ o compilador aloca alguma memória para essa variável com base no data type com o qual ela é declarada, cada data type requer uma quantidade diferente de memória.

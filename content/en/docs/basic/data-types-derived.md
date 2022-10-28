@@ -15,6 +15,8 @@ toc: true
 ---
 ____
 
+{{< alert icon="💡" text="Por favor, Recarregue a página para ver os novos conteúdos." />}}
+
 ## Tipos de Dados Derivado no C++
 
 Os tipos de dados que são derivados dos tipos de dados primitivos ou integrados são chamados de Tipos de Dados Derivados. Estes podem ser de quatro tipos, a saber:

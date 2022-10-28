@@ -15,6 +15,8 @@ toc: true
 ---
 ____
 
+{{< alert icon="💡" text="Por favor, Recarregue a página para ver os novos conteúdos." />}}
+
 Neste artigo vamos aprender alguns programas básicos com C++.
 ____
 
@@ -263,4 +265,83 @@ Resultado:
 ```html
 Digite o total de dias: 500
 500 = 1 ano 19 semanas 2 dias
+```
+_____
+
+## O maior de três números
+
+```c++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n1, n2, n3;
+    cout << "Digite o numero 1: ";
+    cin >> n1;
+    cout << "Digite o numero 2: ";
+    cin >> n2;
+    cout << "Digite o numero 3: ";
+    cin >> n3;
+    if (n1 > n2 && (n1 > n3))
+    {
+        cout << "O numero " << n1 << " e maior." << endl;
+    }
+    if (n2 > n1 && (n2 > n3))
+    {
+        cout << "O numero " << n2 << " e maior." << endl;
+    }
+    else
+    {
+        cout << "O numero " << n3 << " e maior." << endl;
+    }
+    return 0;
+}
+```
+Resultado
+
+```html
+Digite o numero 1: 50
+Digite o numero 2: 100
+Digite o numero 3: 150
+O numero 150 e maior.
+```
+____
+
+## Multiplicação usando Adição
+
+```c++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int a, b, multi=0;
+    cout << "Digite a e b: ";
+    cin >> a >> b;
+    if(b < 0)
+    {
+        a = a + b;
+        b = a - b;
+        a = a - b;
+    }
+    if(a >= 0)
+    {
+        for(int i = 1; i <= a; i++)
+        multi+=b; // multi = multi + b
+    }
+    if(a < 0)
+    {
+        for(int i = a; i <= -1; i++)
+        multi-=b;
+    }
+    cout << "Multiplicacao: " << multi << endl;
+    return 0;
+}
+```
+Resultado:
+
+```html
+Digite a e b: 5 5
+Multiplicacao: 25
 ```

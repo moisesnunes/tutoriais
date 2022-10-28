@@ -15,6 +15,8 @@ toc: true
 ---
 ___
 
+{{< alert icon="💡" text="Por favor, Recarregue a página para ver os novos conteúdos." />}}
+
 ## Introdução à linguagem de programação C++
 
 *C++* é uma linguagem de programação de propósito geral que foi desenvolvida como um aprimoramento da linguagem C para incluir a programação orientada a objetos. É uma linguagem imperativa e *compilada*.

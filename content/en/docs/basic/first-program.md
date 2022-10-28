@@ -15,6 +15,8 @@ toc: true
 ---
 ___
 
+{{< alert icon="💡" text="Por favor, Recarregue a página para ver os novos conteúdos." />}}
+
 ## Nosso Primeiro Porgrama em C++ - Hello World
 
 C++ é uma linguagem de programação orientada a objetos amplamente utilizada e é bastante fácil de entender. Aprender C++ pode ser simplificado em:

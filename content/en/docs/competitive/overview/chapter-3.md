@@ -15,6 +15,8 @@ toc: true
 ---
 ____
 
+{{< alert icon="💡" text="Por favor, Recarregue a página para ver os novos conteúdos." />}}
+
 ## Crivo de Eratóstenes
 
 Dado um número n, faça o print de todos os primos menores ou iguais a $n$. Considere também que $n$ é um número pequeno.

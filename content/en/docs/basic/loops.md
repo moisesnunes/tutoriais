@@ -15,6 +15,8 @@ toc: true
 ---
 ____
 
+{{< alert icon="💡" text="Por favor, Recarregue a página para ver os novos conteúdos." />}}
+
 Na programação, às vezes é necessário realizar alguma operação mais de uma vez ou (digamos) n número de vezes. Os loops são usados quando precisamos executar repetidamente um bloco de instruções.
 
 Vamos supor que queremos fazer o print do "Hello World" 5 vezes, existem duas formas de fazermos isso:

@@ -15,6 +15,8 @@ toc: true
 --- 
 ____
 
+{{< alert icon="💡" text="Por favor, Recarregue a página para ver os novos conteúdos." />}}
+
 Basicamente podemos dizer que um operador opera os operandos. Por exemplo, ‘+’ é um operador usado para adição, conforme mostrado abaixo:
 
 ```html

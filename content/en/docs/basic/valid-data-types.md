@@ -15,6 +15,8 @@ toc: true
 ---
 ____
 
+{{< alert icon="💡" text="Por favor, Recarregue a página para ver os novos conteúdos." />}}
+
 Neste artigo, veremos o que pode acontecer quando excedemos o intervalo válido de tipos de dados internos em C++ com alguns exemplos.
 
 __char__
