@@ -139,3 +139,58 @@ O soma de todos os inteiros divisiveis por 2 entre 1, 5 e: 6
 ____
 
 
+## O fatorial de qualquer número
+
+```c++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int numero, fatorial = 1;
+    cout << "Digite um numero para saber seu fatorial: ";
+    cin >> numero;
+    for (int i = 1; i <= numero; i++)
+    {
+    	fatorial = fatorial * i;
+	}
+	cout << "O fatorial de " << numero << "! = " << fatorial << endl;
+}
+```
+Resultado:
+
+```html
+Digite um numero para saber seu fatorial: 5
+O fatorial de 5! = 120
+```
+_____
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
