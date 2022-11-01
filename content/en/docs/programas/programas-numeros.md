@@ -165,7 +165,12 @@ O fatorial de 5! = 120
 ```
 _____
 
+## Serie de Fibonacci
 
+```c++
+#iclude<iostream>
+int main()
+```
 
 
 
