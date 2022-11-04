@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="{{ .Site.Params.languageTag | default "en-US" }}">
-  {{ partial "google/ads" . }}
-  {{ partial "google/analytics" . }}
+  {{ if ne (hugo.Environment) "development" -}}
+  {{ partial "main/analytics.html" . }}
+  {{ end -}}
   {{ partial "head/head.html" . }}
   {{ if eq .Kind "home" -}}
     {{ .Scratch.Set "class" "home" -}}

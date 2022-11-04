@@ -1,7 +1,7 @@
 ---
 title: "Números com C++"
 description: "Neste artigo vamos aprender programas com operações númericas com o C++."
-lead: "Neste artigo vamos aprender programas com operações númericas com o C++."
+lead: "Neste artigo vamos aprender programas com operações númericas com o C++." 
 date: 2022-10-27T23:23:16-03:00
 lastmod: 2022-10-27T23:23:16-03:00
 draft: false
@@ -168,8 +168,7 @@ _____
 ## Serie de Fibonacci
 
 ```c++
-#iclude<iostream>
-int main()
+
 ```
 
 

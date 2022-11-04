@@ -4,8 +4,9 @@
   <div class="col-md-12 col-lg-10">
     <div class="blog-header">
       <h1>{{ .Title }}</h1>
-      {{ partial "google/ads" . }}
-      {{ partial "google/analytics" . }}
+      {{ if ne (hugo.Environment) "development" -}}
+      {{ partial "main/google.html" . }}
+      {{ end -}}
       {{ partial "main/blog-meta.html" . }}
     </div>
   </div>
