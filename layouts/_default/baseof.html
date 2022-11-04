@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ .Site.Params.languageTag | default "en-US" }}">
   {{ if ne (hugo.Environment) "development" -}}
-  {{ partial "main/analytics.html" . }}
+  {{ partial "main/google.html" . }}
   {{ end -}}
   {{ partial "head/head.html" . }}
   {{ if eq .Kind "home" -}}

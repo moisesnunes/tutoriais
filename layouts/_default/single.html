@@ -4,7 +4,7 @@
     <article>
       <h1>{{ .Title }}</h1>
       {{ if ne (hugo.Environment) "development" -}}
-      {{ partial "main/goole.html" . }}
+      {{ partial "main/google.html" . }}
       {{ end -}}
       {{ .Content }}
     </article>
